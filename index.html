@@ -3,183 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceklist Dokumen (Modern & Responsif)</title>
+    <title>Ceklist Dokumen Lengkap (Ada/Tidak)</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Reset dasar dan font global */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background-color: #f0f2f5; /* Latar belakang abu-abu muda */
-            color: #333;
-            padding: 20px; /* Jarak di pinggir untuk layar kecil */
-        }
-
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        p {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #555;
-        }
-
-        /* Kontainer formulir utama (desain "Card") */
-        form {
-            max-width: 800px;
-            margin: 0 auto; /* Tengah secara horizontal */
-            padding: 2rem;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
-            border: 1px solid #e0e0e0;
-        }
-
-        /* Grup fieldset */
-        fieldset {
-            border: none; /* Hapus border default */
-            margin-bottom: 2rem;
-        }
-
-        /* Judul per bagian (Legend) */
-        legend {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #0056b3; /* Biru primer */
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #007BFF;
-            width: 100%;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #444;
-        }
-
-        /* Styling untuk input teks dan dropdown (select) */
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #fcfcfc;
-            transition: all 0.3s ease;
-        }
-
-        /* Efek saat input/select di-klik (focus) */
-        input[type="text"]:focus,
-        select:focus {
-            outline: none;
-            border-color: #007BFF;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-            background-color: #fff;
-        }
-
-        /* Tombol Submit */
-        button[type="submit"] {
-            width: 100%;
-            padding: 0.85rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        /* Efek hover pada tombol */
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-        }
-
-        /* Tombol saat nonaktif (disabled) */
-        button[type="submit"]:disabled {
-            background-color: #cccccc;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-
-        /* Pesan sukses dan error */
-        #message {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            border-radius: 8px;
-            display: none; /* Sembunyi secara default */
-            font-weight: 500;
-            text-align: center;
-        }
-
-        #message.success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-
-        #message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-
-        /* Media Query untuk RESPONSIVE */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px; /* Kurangi padding di HP */
-            }
-            
-            form {
-                padding: 1.5rem; /* Kurangi padding form di HP */
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            legend {
-                font-size: 1.15rem;
-            }
-        }
+        /* CSS Modern & Responsif (Tidak berubah dari sebelumnya) */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; background-color: #f0f2f5; color: #333; padding: 20px; }
+        h1 { text-align: center; color: #2c3e50; margin-bottom: 1.5rem; font-weight: 600; }
+        p { text-align: center; margin-bottom: 2rem; color: #555; }
+        form { max-width: 800px; margin: 0 auto; padding: 2rem; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07); border: 1px solid #e0e0e0; }
+        fieldset { border: none; margin-bottom: 2rem; }
+        legend { font-size: 1.25rem; font-weight: 600; color: #0056b3; padding-bottom: 0.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid #007BFF; width: 100%; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #444; }
+        input[type="text"], select { width: 100%; padding: 0.8rem 1rem; font-family: 'Poppins', sans-serif; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; background-color: #fcfcfc; transition: all 0.3s ease; }
+        input[type="text"]:focus, select:focus { outline: none; border-color: #007BFF; box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); background-color: #fff; }
+        button[type="submit"] { width: 100%; padding: 0.85rem; font-size: 1.1rem; font-weight: 600; color: white; background-color: #007BFF; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+        button[type="submit"]:hover { background-color: #0056b3; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); }
+        button[type="submit"]:disabled { background-color: #cccccc; cursor: not-allowed; box-shadow: none; }
+        #message { margin-top: 1.5rem; padding: 1rem; border-radius: 8px; display: none; font-weight: 500; text-align: center; }
+        #message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        #message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        @media (max-width: 600px) { body { padding: 10px; } form { padding: 1.5rem; } h1 { font-size: 1.8rem; } legend { font-size: 1.15rem; } }
     </style>
-    </head>
+</head>
 <body>
 
-    <h1>Formulir Ceklist Dokumen</h1>
+    <h1>Ceklist Dokumen Lengkap </h1>
     <p>Tombol "Kirim Data" akan aktif setelah semua item diisi.</p>
     
     <form id="checklistForm">
         
         <fieldset>
-            [cite_start]<legend>Informasi Sekolah [cite: 2]</legend>
+            <legend>Informasi Sekolah </legend>
             <div class="form-group">
                 <label for="npsn">NPSN</label>
-                <input type="text" id="npsn" name="npsn" class="validate-input" required placeholder="Masukkan NPSN Anda...">
+                <input type="text" id="npsn" name="npsn" class="validate-input" required placeholder="Masukkan NPSN...">
             </div>
             <div class="form-group">
                 <label for="namaSekolah">Nama Sekolah</label>
@@ -190,21 +53,19 @@
         <fieldset>
             <legend>1.1 Keterlaksanaan Proses Belajar Mengajar</legend>
             <div class="form-group">
-                <label for="item_1_1_a">Foto/Video Interaksi KBM</label>
+                <label for="item_1_1_a">Foto/Video Interaksi KBM (misal: diskusi kelompok, bimbingan).</label>
                 <select id="item_1_1_a" name="item_1_1_a" class="validate-input" required>
-                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="" disabled selected>Pilih status...</option>
                     <option value="Ada">Ada</option>
                     <option value="Tidak Ada">Tidak Ada</option>
-                    <option value="Belum Selesai">Belum Selesai</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="item_1_1_b">Jurnal Guru/Catatan Harian Guru</label>
                 <select id="item_1_1_b" name="item_1_1_b" class="validate-input" required>
-                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="" disabled selected>Pilih status...</option>
                     <option value="Ada">Ada</option>
                     <option value="Tidak Ada">Tidak Ada</option>
-                    <option value="Belum Selesai">Belum Selesai</option>
                 </select>
             </div>
         </fieldset>
@@ -212,34 +73,1255 @@
         <fieldset>
             <legend>1.2 Pemberian Umpan Balik</legend>
             <div class="form-group">
-                <label for="item_1_2_a">RPP/Modul Ajar (Motivasi/Umpan Balik)</label>
+                <label for="item_1_2_a">RPP/Modul Ajar yang memuat kalimat motivasi/umpan balik konstruktif.</label>
                 <select id="item_1_2_a" name="item_1_2_a" class="validate-input" required>
-                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="" disabled selected>Pilih status...</option>
                     <option value="Ada">Ada</option>
                     <option value="Tidak Ada">Tidak Ada</option>
-                    <option value="Belum Selesai">Belum Selesai</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="item_1_2_b">Catatan Anekdot guru</label>
+                <label for="item_1_2_b">Catatan Anekdot guru tentang proses belajar siswa.</label>
                 <select id="item_1_2_b" name="item_1_2_b" class="validate-input" required>
-                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="" disabled selected>Pilih status...</option>
                     <option value="Ada">Ada</option>
                     <option value="Tidak Ada">Tidak Ada</option>
-                    <option value="Belum Selesai">Belum Selesai</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="item_1_2_c">Hasil Penilaian (Umpan Balik)</label>
                 <select id="item_1_2_c" name="item_1_2_c" class="validate-input" required>
-                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="" disabled selected>Pilih status...</option>
                     <option value="Ada">Ada</option>
                     <option value="Tidak Ada">Tidak Ada</option>
-                    <option value="Belum Selesai">Belum Selesai</option>
                 </select>
             </div>
         </fieldset>
 
+        <fieldset>
+            <legend>1.3 Perhatian dan Dukungan</legend>
+            <div class="form-group">
+                <label for="item_1_3_a">Jurnal/Catatan Guru mengenai siswa yang perlu perhatian khusus.</label>
+                <select id="item_1_3_a" name="item_1_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_3_b">Program & Catatan BK</label>
+                <select id="item_1_3_b" name="item_1_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_3_c">Bukti Komunikasi Orang Tua (WA/buku penghubung)</label>
+                <select id="item_1_3_c" name="item_1_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_3_d">Dokumen PPI (Pencegahan dan Pengendalian Infeksi)</label>
+                <select id="item_1_3_d" name="item_1_3_d" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>1.4 Kompetensi Sosial Emosional</legend>
+            <div class="form-group">
+                <label for="item_1_4_a">RPP/Modul Ajar (Integrasi KSE) (misal: teknik STOP, kerja kelompok).</label>
+                <select id="item_1_4_a" name="item_1_4_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_4_b">Materi Ajar KSE (Kompetensi Sosial Emosional)</label>
+                <select id="item_1_4_b" name="item_1_4_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_4_c">Foto/Video Kegiatan KSE (Kompetensi Sosial Emosional)</label>
+                <select id="item_1_4_c" name="item_1_4_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>2.1 Kesepakatan Kelas</legend>
+            <div class="form-group">
+                <label for="item_2_1_a">Foto Kesepakatan Kelas yang terpajang.</label>
+                <select id="item_2_1_a" name="item_2_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_1_b">Foto proses pembuatan kesepakatan bersama siswa.</label>
+                <select id="item_2_1_b" name="item_2_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_1_c">Dokumen kesepakatan yang ditandatangani guru dan siswa.</label>
+                <select id="item_2_1_c" name="item_2_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>2.2 Penanganan Disiplin</legend>
+            <div class="form-group">
+                <label for="item_2_2_a">Catatan/jurnal penanganan kasus siswa (misal: menggunakan segitiga restitusi).</label>
+                <select id="item_2_2_a" name="item_2_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_2_b">Buku piket/catatan guru tentang tindak lanjut pelanggaran (dialog, bukan hukuman).</label>
+                <select id="item_2_2_b" name="item_2_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_2_c">SOP (Standar Operasional Prosedur) penanganan disiplin siswa.</label>
+                <select id="item_2_2_c" name="item_2_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>2.3 Keterlibatan Siswa</legend>
+            <div class="form-group">
+                <label for="item_2_3_a">RPP/Modul Ajar (menunjukkan manajemen waktu & variasi kegiatan).</label>
+                <select id="item_2_3_a" name="item_2_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_3_b">Instrumen dan hasil supervisi akademik oleh Kepala Sekolah/Pengelola.</label>
+                <select id="item_2_3_b" name="item_2_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_2_3_c">Foto/video yang menunjukkan siswa fokus dan terlibat aktif.</label>
+                <select id="item_2_3_c" name="item_2_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.1 Perencanaan Pembelajaran</legend>
+            <div class="form-group">
+                <label for="item_3_1_a">Kumpulan RPP/Modul Ajar.</label>
+                <select id="item_3_1_a" name="item_3_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_1_b">Program Tahunan (Prota).</label>
+                <select id="item_3_1_b" name="item_3_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_1_c">Program Semester (Promes).</label>
+                <select id="item_3_1_c" name="item_3_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.2 Penilaian Formatif</legend>
+            <div class="form-group">
+                <label for="item_3_2_a">Contoh instrumen penilaian formatif (kuis, LKPD, rubrik observasi).</label>
+                <select id="item_3_2_a" name="item_3_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_2_b">Contoh hasil pekerjaan siswa yang diberi umpan balik/catatan perbaikan.</label>
+                <select id="item_3_2_b" name="item_3_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_2_c">Jurnal refleksi guru setelah mengajar.</label>
+                <select id="item_3_2_c" name="item_3_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.3 Penilaian Sumatif</legend>
+            <div class="form-group">
+                <label for="item_3_3_a">Instrumen Penilaian Sumatif</label>
+                <select id="item_3_3_a" name="item_3_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_3_b">Dokumen KKTP ( Kriteria Ketercapaian Tujuan Pembelajaran)</label>
+                <select id="item_3_3_b" name="item_3_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_3_c">Portofolio/Proyek Siswa</label>
+                <select id="item_3_3_c" name="item_3_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.4 Laporan Kemajuan</legend>
+            <div class="form-group">
+                <label for="item_3_4_a">Contoh Rapor (Deskriptif)</label>
+                <select id="item_3_4_a" name="item_3_4_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_4_b">Dokumen Remedial & Pengayaan</label>
+                <select id="item_3_4_b" name="item_3_4_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_4_c">Notulen Rapat Orang Tua</label>
+                <select id="item_3_4_c" name="item_3_4_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3.5 HOTS (Keterampilan Berpikir Tingkat Tinggi)</legend>
+            <div class="form-group">
+                <label for="item_3_5_a">RPP (PBL/PjBL/Inkuiri)</label>
+                <select id="item_3_5_a" name="item_3_5_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_5_b">LKPD/Tugas HOTS</label>
+                <select id="item_3_5_b" name="item_3_5_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_3_5_c">Hasil Karya (Analisis) Siswa</label>
+                <select id="item_3_5_c" name="item_3_5_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>4.1 Kegiatan Keagamaan</legend>
+            <div class="form-group">
+                <label for="item_4_1_a">Jadwal Kegiatan Keagamaan</label>
+                <select id="item_4_1_a" name="item_4_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_1_b">Foto/Video Kegiatan keagamaan.</label>
+                <select id="item_4_1_b" name="item_4_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_1_c">RPP/Modul Ajar Agama</label>
+                <select id="item_4_1_c" name="item_4_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>4.2 Konten Lokal dan Kebangsaan</legend>
+            <div class="form-group">
+                <label for="item_4_2_a">RPP/Modul Ajar (IPS, PKn, Sejarah) yang mengintegrasikan konten lokal/kebangsaan.</label>
+                <select id="item_4_2_a" name="item_4_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_2_b">Foto/video kegiatan (peringatan hari besar nasional, penggunaan batik).</label>
+                <select id="item_4_2_b" name="item_4_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_2_c">Dokumentasi kunjungan (museum, situs budaya) atau bakti sosial.</label>
+                <select id="item_4_2_c" name="item_4_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>4.3 Pemecahan Masalah</legend>
+            <div class="form-group">
+                <label for="item_4_3_a">RPP (PBL/PjBL)</label>
+                <select id="item_4_3_a" name="item_4_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_3_b">Instrumen Penilaian HOTS</label>
+                <select id="item_4_3_b" name="item_4_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_3_c">Hasil proyek/karya siswa yang memecahkan masalah.</label>
+                <select id="item_4_3_c" name="item_4_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>4.4 Keterampilan Hidup (Life Skills)</legend>
+            <div class="form-group">
+                <label for="item_4_4_a">Dokumen KOSP yang menyebutkan kekhasan (misal: life skills, vokasi).</label>
+                <select id="item_4_4_a" name="item_4_4_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_4_b">Modul/jadwal pelatihan life skills / keterampilan vokasi.</label>
+                <select id="item_4_4_b" name="item_4_4_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_4_4_c">Foto/video pameran hasil karya life skills siswa.</label>
+                <select id="item_4_4_c" name="item_4_4_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>5.1 Refleksi Pembelajaran</legend>
+            <div class="form-group">
+                <label for="item_5_1_a">Jadwal/Agenda rapat evaluasi rutin.</label>
+                <select id="item_5_1_a" name="item_5_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_1_b">Notulen rapat yang berisi agenda refleksi pembelajaran.</label>
+                <select id="item_5_1_b" name="item_5_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_1_c">Instrumen refleksi diri yang diisi oleh pendidik.</label>
+                <select id="item_5_1_c" name="item_5_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>5.2 Supervisi Akademik</legend>
+            <div class="form-group">
+                <label for="item_5_2_a">SK Tim Penjaminan Mutu (TPM) (jika ada).</label>
+                <select id="item_5_2_a" name="item_5_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_2_b">Jadwal dan instrumen supervisi akademik.</label>
+                <select id="item_5_2_b" name="item_5_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_2_c">Laporan hasil supervisi dan tindak lanjutnya.</label>
+                <select id="item_5_2_c" name="item_5_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>5.3 Pengembangan Profesi (PKB)</legend>
+            <div class="form-group">
+                <label for="item_5_3_a">Program/rencana PKB (Pengembangan Keprofesian Berkelanjutan) lembaga.</label>
+                <select id="item_5_3_a" name="item_5_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_3_b">Laporan pelaksanaan PKB (IHT, workshop).</label>
+                <select id="item_5_3_b" name="item_5_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_3_c">Sertifikat/surat tugas keikutsertaan pendidik dalam pelatihan.</label>
+                <select id="item_5_3_c" name="item_5_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_3_d">Dokumentasi (foto, notulen) kegiatan komunitas belajar (Kombel) internal.</label>
+                <select id="item_5_3_d" name="item_5_3_d" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>5.4 Manajemen Kinerja Guru</legend>
+            <div class="form-group">
+                <label for="item_5_4_a">SOP atau pedoman tentang manajemen kinerja guru.</label>
+                <select id="item_5_4_a" name="item_5_4_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_4_b">Dokumen penilaian kinerja pendidik (misal: PKG).</label>
+                <select id="item_5_4_b" name="item_5_4_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_5_4_c">Bukti pemberian penghargaan (sertifikat, insentif) atau sanksi (surat teguran).</label>
+                <select id="item_5_4_c" name="item_5_4_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6.1 Visi, Misi, dan Tujuan</legend>
+            <div class="form-group">
+                <label for="item_6_1_a">Dokumen Visi, Misi, dan Tujuan lembaga.</label>
+                <select id="item_6_1_a" name="item_6_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_1_b">Foto pajangan Visi-Misi di tempat strategis.</label>
+                <select id="item_6_1_b" name="item_6_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_1_c">Notulen/foto sosialisasi Visi-Misi kepada warga belajar dan orang tua.</label>
+                <select id="item_6_1_c" name="item_6_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6.2 Kemitraan</legend>
+            <div class="form-group">
+                <label for="item_6_2_a">Dokumen MoU/PKS dengan mitra (DUDI, instansi, komunitas).</label>
+                <select id="item_6_2_a" name="item_6_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_2_b">Undangan/notulen rapat dengan orang tua/wali (komite).</label>
+                <select id="item_6_2_b" name="item_6_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_2_c">Laporan kegiatan yang melibatkan mitra atau orang tua.</label>
+                <select id="item_6_2_c" name="item_6_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6.3 Evaluasi Pemangku Kepentingan</legend>
+            <div class="form-group">
+                <label for="item_6_3_a">Instrumen survei/evaluasi untuk orang tua, siswa, atau mitra.</label>
+                <select id="item_6_3_a" name="item_6_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_3_b">Laporan hasil survei/evaluasi.</label>
+                <select id="item_6_3_b" name="item_6_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_3_c">Notulen rapat evaluasi yang mengundang perwakilan pemangku kepentingan.</label>
+                <select id="item_6_3_c" name="item_6_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>6.4 Perencanaan Berbasis Data</legend>
+            <div class="form-group">
+                <label for="item_6_4_a">Dokumen RKT/RKAS</label>
+                <select id="item_6_4_a" name="item_6_4_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_4_b">EDS / Rapor Pendidikan</label>
+                <select id="item_6_4_b" name="item_6_4_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_6_4_c">Notulen Rapat Penyusunan RKT</label>
+                <select id="item_6_4_c" name="item_6_4_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>7.1 Anggaran</legend>
+            <div class="form-group">
+                <label for="item_7_1_a">Dokumen RKA</label>
+                <select id="item_7_1_a" name="item_7_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_7_1_b">Laporan Keuangan/LPJ (BOS)</label>
+                <select id="item_7_1_b" name="item_7_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>7.2 Rincian Anggaran</legend>
+            <div class="form-group">
+                <label for="item_7_2_a">Dokumen RKA Rinci</label>
+                <select id="item_7_2_a" name="item_7_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>7.3 Laporan Keuangan</legend>
+            <div class="form-group">
+                <label for="item_7_3_a">Laporan Keuangan Berkala</label>
+                <select id="item_7_3_a" name="item_7_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_7_3_b">Bukti Publikasi Laporan</label>
+                <select id="item_7_3_b" name="item_7_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_7_3_c">Notulen Rapat Laporan</label>
+                <select id="item_7_3_c" name="item_7_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>8.1 Sarana Prasarana (Sarpras)</legend>
+            <div class="form-group">
+                <label for="item_8_1_a">Daftar Inventaris Barang (KIR)</label>
+                <select id="item_8_1_a" name="item_8_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_8_1_b">Data Prasarana</label>
+                <select id="item_8_1_b" name="item_8_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_8_1_c">Foto Kondisi Sarpras</label>
+                <select id="item_8_1_c" name="item_8_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_8_1_d">MoU/PKS Pemanfaatan Sarpras</label>
+                <select id="item_8_1_d" name="item_8_1_d" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>8.2 Manajemen Sarpras</legend>
+            <div class="form-group">
+                <label for="item_8_2_a">Jadwal Penggunaan Ruang</label>
+                <select id="item_8_2_a" name="item_8_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_8_2_b">Buku Pemeliharaan</label>
+                <select id="item_8_2_b" name="item_8_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_8_2_c">SOP Peminjaman</label>
+                <select id="item_8_2_c" name="item_8_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>9.1 Dokumen KOSP</legend>
+            <div class="form-group">
+                <label for="item_9_1_a">Dokumen KOSP (Sah)</label>
+                <select id="item_9_1_a" name="item_9_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>9.2 Evaluasi Kurikulum</legend>
+            <div class="form-group">
+                <label for="item_9_2_a">SK Tim Pengembang Kurikulum</label>
+                <select id="item_9_2_a" name="item_9_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_9_2_b">Notulen Rapat Evaluasi Kurikulum</label>
+                <select id="item_9_2_b" name="item_9_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_9_2_c">Instrumen Evaluasi</label>
+                <select id="item_9_2_c" name="item_9_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>9.3 Analisis Kebutuhan</legend>
+            <div class="form-group">
+                <label for="item_9_3_a">Dokumen KOSP (Bab Analisis Karakteristik & Kebutuhan)</label>
+                <select id="item_9_3_a" name="item_9_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>10.1 Kebinekaan</legend>
+            <div class="form-group">
+                <label for="item_10_1_a">Tata Tertib/Kode Etik</label>
+                <select id="item_10_1_a" name="item_10_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_10_1_b">Foto/Video Kegiatan Keberagaman</label>
+                <select id="item_10_1_b" name="item_10_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_10_1_c">RPP (Integrasi Kebinekaan)</label>
+                <select id="item_10_1_c" name="item_10_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>10.2 Fasilitas Ibadah</legend>
+            <div class="form-group">
+                <label for="item_10_2_a">Jadwal/Kebijakan Ibadah</label>
+                <select id="item_10_2_a" name="item_10_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_10_2_b">Foto Fasilitas/Kegiatan Ibadah</label>
+                <select id="item_10_2_b" name="item_10_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>10.3 Kesetaraan Gender</legend>
+            <div class="form-group">
+                <label for="item_10_3_a">Tata Tertib</label>
+                <select id="item_10_3_a" name="item_10_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_10_3_b">Foto Kegiatan (Peran Setara)</label>
+                <select id="item_10_3_b" name="item_10_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_10_3_c">Materi/Program Kesetaraan Gender</label>
+                <select id="item_10_3_c" name="item_10_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>11.1 PPDB</legend>
+            <div class="form-group">
+                <label for="item_11_1_a">SOP PPDB</label>
+                <select id="item_11_1_a" name="item_11_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_11_1_b">Tata Tertib</label>
+                <select id="item_11_1_b" name="item_11_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>11.2 Layanan Siswa Inklusif</legend>
+            <div class="form-group">
+                <label for="item_11_2_a">RPP (Berdiferensiasi)</label>
+                <select id="item_11_2_a" name="item_11_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_11_2_b">Notulen/Foto Sosialisasi Inklusif</label>
+                <select id="item_11_2_b" name="item_11_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_11_2_c">Program Layanan Siswa (ABK)</label>
+                <select id="item_11_2_c" name="item_11_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>12.1 Penanganan Kekerasan (TPPK)</legend>
+            <div class="form-group">
+                <label for="item_12_1_a">SK Tim TPPK (Tim Pencegahan dan Penanganan Kekerasan)</label>
+                <select id="item_12_1_a" name="item_12_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_12_1_b">SOP Penanganan Kekerasan</label>
+                <select id="item_12_1_b" name="item_12_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_12_1_c">Tata Tertib (Sanksi Perundungan)</label>
+                <select id="item_12_1_c" name="item_12_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>12.2 Sosialisasi Anti-Perundungan</legend>
+            <div class="form-group">
+                <label for="item_12_2_a">Poster/Media (KIE) Anti-Perundungan</label>
+                <select id="item_12_2_a" name="item_12_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_12_2_b">Dokumentasi Sosialisasi/Kampanye</label>
+                <select id="item_12_2_b" name="item_12_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_12_2_c">Catatan Penanganan Kasus</label>
+                <select id="item_12_2_c" name="item_12_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>13.1 Kondisi Fisik</legend>
+            <div class="form-group">
+                <label for="item_13_1_a">Foto Kondisi Fisik Bangunan</label>
+                <select id="item_13_1_a" name="item_13_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_1_b">Tata Tertib Penggunaan Alat/Ruang</label>
+                <select id="item_13_1_b" name="item_13_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>13.2 Fasilitas P3K / UKS</legend>
+            <div class="form-group">
+                <label for="item_13_2_a">Foto Kotak P3K & Isinya</label>
+                <select id="item_13_2_a" name="item_13_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_2_b">Daftar Isi P3K</label>
+                <select id="item_13_2_b" name="item_13_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_2_c">Foto Ruang UKS</label>
+                <select id="item_13_2_c" name="item_13_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>13.3 Mitigasi Bencana</legend>
+            <div class="form-group">
+                <label for="item_13_3_a">SOP Mitigasi Bencana</label>
+                <select id="item_13_3_a" name="item_13_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_3_b">Foto Jalur Evakuasi</label>
+                <select id="item_13_3_b" name="item_13_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_3_c">Foto APAR (Alat Pemadam Api Ringan)</label>
+                <select id="item_13_3_c" name="item_13_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_13_3_d">Dokumentasi Simulasi Bencana</label>
+                <select id="item_13_3_d" name="item_13_3_d" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>14.1 PHBS (Perilaku Hidup Bersih Sehat)</legend>
+            <div class="form-group">
+                <label for="item_14_1_a">Foto Lingkungan Bersih (Toilet, dll)</label>
+                <select id="item_14_1_a" name="item_14_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_1_b">Jadwal Piket</label>
+                <select id="item_14_1_b" name="item_14_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_1_c">Dokumentasi Kegiatan PHBS</label>
+                <select id="item_14_1_c" name="item_14_1_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>14.2 Kesehatan Mental</legend>
+            <div class="form-group">
+                <label for="item_14_2_a">Jadwal/Program Layanan BK</label>
+                <select id="item_14_2_a" name="item_14_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_2_b">Program Ekstrakurikuler</label>
+                <select id="item_14_2_b" name="item_14_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_2_c">Dokumentasi Sosialisasi Kesmen</label>
+                <select id="item_14_2_c" name="item_14_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>14.3 Anti Narkoba & Kesehatan Reproduksi</legend>
+            <div class="form-group">
+                <label for="item_14_3_a">Materi/Modul Ajar Terintegrasi</label>
+                <select id="item_14_3_a" name="item_14_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_3_b">Dokumentasi Penyuluhan (BNN/Puskesmas)</label>
+                <select id="item_14_3_b" name="item_14_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_14_3_c">Poster/Media KIE Narkoba/Kespro</label>
+                <select id="item_14_3_c" name="item_14_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>15.1 Portofolio Tugas</legend>
+            <div class="form-group">
+                <label for="item_15_1_a">Portofolio Tugas Siswa (Makalah, Esai)</label>
+                <select id="item_15_1_a" name="item_15_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_15_1_b">Video Presentasi/Diskusi Siswa</label>
+                <select id="item_15_1_b" name="item_15_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>15.2 Karya Proyek</legend>
+            <div class="form-group">
+                <label for="item_15_2_a">Foto/Video Karya/Proyek Siswa</label>
+                <select id="item_15_2_a" name="item_15_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_15_2_b">Laporan Proyek/Portofolio Karya</label>
+                <select id="item_15_2_b" name="item_15_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>15.3 Tracer Study & Testimoni</legend>
+            <div class="form-group">
+                <label for="item_15_3_a">Tracer Study (Penelusuran Lulusan)</label>
+                <select id="item_15_3_a" name="item_15_3_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_15_3_b">Catatan Kegiatan Siswa di Masyarakat</label>
+                <select id="item_15_3_b" name="item_15_3_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_15_3_c">Testimoni Lulusan/Mitra</label>
+                <select id="item_15_3_c" name="item_15_3_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                </select>
+            </div>
+        </fieldset>
+        
         <button type="submit" id="submitButton">Kirim Data</button>
         <div id="message"></div>
     </form>
@@ -247,9 +1329,11 @@
     <script>
         // === JavaScript untuk Validasi dan Pengiriman ===
         // (KODE SCRIPT INI TIDAK BERUBAH SAMA SEKALI DARI SEBELUMNYA)
+        // Ia bekerja otomatis dengan class 'validate-input'
 
-        // !!! GANTI DENGAN URL ANDA !!!
+        // !!! GANTI DENGAN URL ANDA DARI LANGKAH 2 !!!
         const scriptURL = 'PASTE_URL_APLIKASI_WEB_ANDA_DI_SINI';
+        
         const form = document.getElementById('checklistForm');
         const submitButton = document.getElementById('submitButton');
         const messageDiv = document.getElementById('message');
