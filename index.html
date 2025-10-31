@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceklist Dokumen (Modern & Responsif)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset dasar dan font global */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5; /* Latar belakang abu-abu muda */
+            color: #333;
+            padding: 20px; /* Jarak di pinggir untuk layar kecil */
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        /* Kontainer formulir utama (desain "Card") */
+        form {
+            max-width: 800px;
+            margin: 0 auto; /* Tengah secara horizontal */
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Grup fieldset */
+        fieldset {
+            border: none; /* Hapus border default */
+            margin-bottom: 2rem;
+        }
+
+        /* Judul per bagian (Legend) */
+        legend {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #0056b3; /* Biru primer */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #007BFF;
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #444;
+        }
+
+        /* Styling untuk input teks dan dropdown (select) */
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fcfcfc;
+            transition: all 0.3s ease;
+        }
+
+        /* Efek saat input/select di-klik (focus) */
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #007BFF;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+            background-color: #fff;
+        }
+
+        /* Tombol Submit */
+        button[type="submit"] {
+            width: 100%;
+            padding: 0.85rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Efek hover pada tombol */
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Tombol saat nonaktif (disabled) */
+        button[type="submit"]:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Pesan sukses dan error */
+        #message {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none; /* Sembunyi secara default */
+            font-weight: 500;
+            text-align: center;
+        }
+
+        #message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        #message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Media Query untuk RESPONSIVE */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px; /* Kurangi padding di HP */
+            }
+            
+            form {
+                padding: 1.5rem; /* Kurangi padding form di HP */
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            legend {
+                font-size: 1.15rem;
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <h1>Formulir Ceklist Dokumen</h1>
+    <p>Tombol "Kirim Data" akan aktif setelah semua item diisi.</p>
+    
+    <form id="checklistForm">
+        
+        <fieldset>
+            [cite_start]<legend>Informasi Sekolah [cite: 2]</legend>
+            <div class="form-group">
+                <label for="npsn">NPSN</label>
+                <input type="text" id="npsn" name="npsn" class="validate-input" required placeholder="Masukkan NPSN Anda...">
+            </div>
+            <div class="form-group">
+                <label for="namaSekolah">Nama Sekolah</label>
+                <input type="text" id="namaSekolah" name="namaSekolah" class="validate-input" required placeholder="Masukkan Nama Sekolah...">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>1.1 Keterlaksanaan Proses Belajar Mengajar</legend>
+            <div class="form-group">
+                <label for="item_1_1_a">Foto/Video Interaksi KBM</label>
+                <select id="item_1_1_a" name="item_1_1_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Belum Selesai">Belum Selesai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_1_b">Jurnal Guru/Catatan Harian Guru</label>
+                <select id="item_1_1_b" name="item_1_1_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Belum Selesai">Belum Selesai</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>1.2 Pemberian Umpan Balik</legend>
+            <div class="form-group">
+                <label for="item_1_2_a">RPP/Modul Ajar (Motivasi/Umpan Balik)</label>
+                <select id="item_1_2_a" name="item_1_2_a" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Belum Selesai">Belum Selesai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_2_b">Catatan Anekdot guru</label>
+                <select id="item_1_2_b" name="item_1_2_b" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Belum Selesai">Belum Selesai</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="item_1_2_c">Hasil Penilaian (Umpan Balik)</label>
+                <select id="item_1_2_c" name="item_1_2_c" class="validate-input" required>
+                    <option value="" disabled selected>Pilih status dokumen...</option>
+                    <option value="Ada">Ada</option>
+                    <option value="Tidak Ada">Tidak Ada</option>
+                    <option value="Belum Selesai">Belum Selesai</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <button type="submit" id="submitButton">Kirim Data</button>
+        <div id="message"></div>
+    </form>
+
+    <script>
+        // === JavaScript untuk Validasi dan Pengiriman ===
+        // (KODE SCRIPT INI TIDAK BERUBAH SAMA SEKALI DARI SEBELUMNYA)
+
+        // !!! GANTI DENGAN URL ANDA !!!
+        const scriptURL = 'PASTE_URL_APLIKASI_WEB_ANDA_DI_SINI';
+        const form = document.getElementById('checklistForm');
+        const submitButton = document.getElementById('submitButton');
+        const messageDiv = document.getElementById('message');
+        const allInputs = document.querySelectorAll('.validate-input');
+
+        function validateForm() {
+            let allValid = true;
+            allInputs.forEach(input => {
+                if (input.value === "") {
+                    allValid = false;
+                }
+            });
+            submitButton.disabled = !allValid;
+        }
+
+        document.addEventListener('DOMContentLoaded', validateForm);
+
+        allInputs.forEach(input => {
+            input.addEventListener('input', validateForm);
+            input.addEventListener('change', validateForm);
+        });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); 
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Mengirim...';
+            messageDiv.style.display = 'none';
+
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                if (data.result === 'success') {
+                    messageDiv.textContent = 'Data berhasil terkirim ke Google Sheet!';
+                    messageDiv.className = 'success';
+                    messageDiv.style.display = 'block';
+                    
+                    form.reset(); 
+                    validateForm(); 
+                } else {
+                    throw new Error(data.message || 'Terjadi kesalahan');
+                }
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                messageDiv.textContent = 'Error: ' + error.message;
+                messageDiv.className = 'error';
+                messageDiv.style.display = 'block';
+            })
+            .finally(() => {
+                if (submitButton.disabled && messageDiv.className !== 'success') {
+                   submitButton.disabled = false;
+                }
+                submitButton.textContent = 'Kirim Data';
+            });
+        });
+    </script>
+
+</body>
+</html>
