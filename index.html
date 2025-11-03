@@ -1005,5 +1005,48 @@
         });
     </script>
 <script src="path/ke/script-utama.js"></script>
+
+
+
+    <script>
+    // --- 1. Mendapatkan Elemen ---
+    const inputElement = document.getElementById('dataInput');
+    const checkElement = document.getElementById('dataCheck');
+
+    // --- 2. Memuat Data Saat Halaman Dimuat ---
+    window.onload = function() {
+        // Memuat nilai teks
+        const storedText = localStorage.getItem('inputText');
+        if (storedText) {
+            inputElement.value = storedText;
+        }
+
+        // Memuat status checkbox (menggunakan 'true' atau null)
+        const storedCheck = localStorage.getItem('isChecked');
+        if (storedCheck === 'true') {
+            checkElement.checked = true;
+        } else {
+            checkElement.checked = false;
+        }
+    };
+
+    // --- 3. Menyimpan Data Setiap Kali Ada Perubahan (Event Listener) ---
+
+    // Menyimpan saat input teks berubah
+    inputElement.addEventListener('input', function() {
+        localStorage.setItem('inputText', inputElement.value);
+    });
+
+    // Menyimpan saat status checkbox berubah
+    checkElement.addEventListener('change', function() {
+        // Menyimpan 'true' jika tercentang, 'false' jika tidak
+        localStorage.setItem('isChecked', checkElement.checked ? 'true' : 'false');
+    });
+
+    // CATATAN: Jika Anda ingin data hanya bertahan selama sesi browser (bukan permanen),
+    // ganti semua 'localStorage' dengan 'sessionStorage'.
+
+</script>
+    
 </body>
 </html>
