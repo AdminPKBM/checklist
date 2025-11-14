@@ -4,63 +4,67 @@
     <script src="path/ke/script-penting.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceklist Dokumen (Versi Centang)</title>
+    <title>Ceklist Dokumen Minimalis</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* --- CSS Modern & Responsif --- */
+        /* --- Reset & Base Styles --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background-color: #f0f2f5;
+            background-color: #f7f7f9; /* Warna latar yang lebih lembut */
             color: #333;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
+            color: #1a237e; /* Warna header yang lebih profesional/gelap */
+            margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
-        p {
+        .subtitle { /* Kelas baru untuk paragraf */
             text-align: center;
             margin-bottom: 2rem;
-            color: #555;
+            color: #666;
+            font-size: 0.95rem;
         }
 
         form {
-            max-width: 800px;
+            max-width: 700px; /* Lebar yang lebih ideal untuk form panjang */
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2.5rem 1.5rem; /* Padding lebih besar untuk desktop */
             background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.07);
-            border: 1px solid #e0e0e0;
+            border-radius: 16px; /* Sudut lebih melengkung */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Shadow lebih lembut */
+            border: 1px solid #e9e9f1;
         }
 
         fieldset {
             border: none;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem; /* Jarak antar bagian lebih lega */
+            padding-top: 1rem;
         }
 
         legend {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
-            color: #0056b3;
-            padding-bottom: 0.5rem;
+            color: #1a237e;
+            padding: 0 0.5rem 0.5rem 0;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid #007BFF;
+            border-bottom: 3px solid #6c757d; /* Garis pemisah lebih minimalis */
             width: 100%;
         }
 
-        /* Styling untuk input teks (NPSN & Nama) */
+        /* --- Input Teks (NPSN & Nama) --- */
         .form-group {
             margin-bottom: 1.5rem;
         }
@@ -70,6 +74,7 @@
             margin-bottom: 0.5rem;
             font-weight: 500;
             color: #444;
+            font-size: 0.95rem;
         }
 
         input[type="text"] {
@@ -77,72 +82,126 @@
             padding: 0.8rem 1rem;
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd; /* Border lebih terang */
             border-radius: 8px;
-            background-color: #fcfcfc;
+            background-color: #ffffff;
             transition: all 0.3s ease;
         }
 
-        /* Efek saat input di-klik (focus) */
         input[type="text"]:focus {
             outline: none;
             border-color: #007BFF;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
-            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
         }
 
-        /* === CSS BARU untuk CHECKLIST === */
+        /* === Checkbox List Styling (Lebih Minimalis dan Keterbacaan) === */
         .form-group-checkbox {
             display: flex;
-            align-items: flex-start; /* Rata atas jika teksnya panjang */
-            margin-bottom: 1rem;
-            background-color: #f8f9fa;
+            align-items: center; /* Rata tengah vertikal */
+            margin-bottom: 0.5rem;
             padding: 1rem;
+            background-color: #ffffff; /* Menggunakan putih polos */
             border-radius: 8px;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #eee; /* Border sangat tipis */
             transition: all 0.2s ease;
+            cursor: pointer; /* Menandakan seluruh baris bisa diklik */
         }
-
+        
         .form-group-checkbox:hover {
+            background-color: #f0f8ff; /* Warna hover lembut */
             border-color: #007BFF;
         }
 
         .form-group-checkbox input[type="checkbox"] {
-            width: 1.3em;
-            height: 1.3em;
-            margin-right: 0.8rem;
-            margin-top: 0.2em; /* Posisikan sedikit ke bawah agar rata */
+            /* Sembunyikan checkbox asli untuk diganti dengan kustom */
+            opacity: 0; 
+            position: absolute;
+        }
+        
+        /* Label kustom untuk item checklist */
+        .form-group-checkbox label {
+            margin: 0;
+            font-weight: 400; /* Font lebih tipis untuk isi */
+            color: #333;
+            flex-grow: 1; /* Memastikan label mengisi ruang */
             cursor: pointer;
-            accent-color: #007BFF; /* Warna centang modern */
-            flex-shrink: 0; /* Mencegah checkbox mengecil */
+            padding-left: 30px; /* Ruang untuk checkbox kustom */
+            position: relative;
+        }
+        
+        /* Checkbox Kustom (Simulasi) */
+        .form-group-checkbox label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #6c757d; /* Warna abu-abu */
+            border-radius: 4px;
+            background-color: #fff;
+            transition: all 0.2s ease;
+        }
+        
+        /* Ikon Centang Kustom */
+        .form-group-checkbox label::after {
+            content: '\f00c'; /* Font Awesome checkmark icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) scale(0); /* Awalnya tersembunyi */
+            color: #fff;
+            background-color: #007BFF;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        
+        /* Kondisi Tercentang */
+        .form-group-checkbox input[type="checkbox"]:checked + label::before {
+            border-color: #007BFF;
+            background-color: #007BFF;
+            opacity: 0; /* Sembunyikan kotak setelah tercentang */
         }
 
-        .form-group-checkbox label {
-            margin-bottom: 0;
-            font-weight: 500;
-            color: #333;
-            cursor: pointer;
+        .form-group-checkbox input[type="checkbox"]:checked + label::after {
+            transform: translateY(-50%) scale(1); /* Tampilkan centang */
+            background-color: #007BFF;
         }
-        /* === Akhir CSS BARU === */
+        
+        /* Tambahkan style untuk item yang sudah dicheck (opsional) */
+        .form-group-checkbox input[type="checkbox"]:checked + label {
+            color: #6c757d; /* Teks agak pudar */
+            text-decoration: none; /* Hilangkan garis coret */
+            font-weight: 500;
+        }
+        /* === Akhir Styling Checkbox Kustom === */
 
 
         /* Tombol Submit */
         button[type="submit"] {
             width: 100%;
-            padding: 0.85rem;
+            padding: 1rem;
             font-size: 1.1rem;
             font-weight: 600;
             color: white;
-            background-color: #007BFF;
+            background-color: #1a237e; /* Warna biru yang sama dengan header */
             border: none;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin-top: 1.5rem;
         }
 
         button[type="submit"]:hover {
-            background-color: #0056b3;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            background-color: #0d47a1;
+            box-shadow: 0 4px 15px rgba(26, 35, 126, 0.3);
         }
 
         button[type="submit"]:disabled {
@@ -151,7 +210,7 @@
             box-shadow: none;
         }
 
-        /* Pesan sukses dan error */
+        /* Pesan sukses dan error (tetap sama) */
         #message {
             margin-top: 1.5rem;
             padding: 1rem;
@@ -163,19 +222,29 @@
         #message.success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         #message.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
 
-        @media (max-width: 600px) {
+        /* --- Responsif (Mobile-first adjustment) --- */
+        @media (max-width: 768px) {
             body { padding: 10px; }
-            form { padding: 1.5rem; }
-            h1 { font-size: 1.8rem; }
-            legend { font-size: 1.15rem; }
-            .form-group-checkbox { padding: 0.8rem; }
+            form { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.5rem; }
+            .subtitle { font-size: 0.85rem; margin-bottom: 1.5rem; }
+            legend { font-size: 1.1rem; margin-bottom: 1rem; }
+            .form-group-checkbox { padding: 0.75rem; font-size: 0.95rem; }
+            
+            /* Penyesuaian kustom checkbox untuk mobile */
+            .form-group-checkbox label { padding-left: 28px; }
+            .form-group-checkbox label::before, .form-group-checkbox label::after {
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Ceklist Dokumen </h1>
-    <p>Tombol "Kirim Data" akan aktif setelah NPSN dan Nama Sekolah diisi.</p>
+    <h1><i class="fas fa-list-check"></i> Ceklis Dokumen</h1>
+    <p class="subtitle">Pastikan semua dokumen di bawah ini tersedia. Tombol **Kirim Data** akan aktif setelah NPSN dan Nama Sekolah diisi.</p>
     
     <form id="checklistForm">
         
@@ -204,454 +273,6 @@
         </fieldset>
 
         <fieldset>
-            <legend>1.2 Pemberian Umpan Balik</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_2_a" name="item_1_2_a" value="Ada" class="validate-input">
-                <label for="item_1_2_a">RPP/Modul Ajar yang memuat kalimat motivasi/umpan balik konstruktif.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_2_b" name="item_1_2_b" value="Ada" class="validate-input">
-                <label for="item_1_2_b">Catatan Anekdot guru tentang proses belajar siswa.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_2_c" name="item_1_2_c" value="Ada" class="validate-input">
-                <label for="item_1_2_c">Hasil Penilaian (Umpan Balik)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>1.3 Perhatian dan Dukungan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_3_a" name="item_1_3_a" value="Ada" class="validate-input">
-                <label for="item_1_3_a">Jurnal/Catatan Guru mengenai siswa yang perlu perhatian khusus.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_3_b" name="item_1_3_b" value="Ada" class="validate-input">
-                <label for="item_1_3_b">Program & Catatan BK</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_3_c" name="item_1_3_c" value="Ada" class="validate-input">
-                <label for="item_1_3_c">Bukti Komunikasi Orang Tua (WA/buku penghubung)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_3_d" name="item_1_3_d" value="Ada" class="validate-input">
-                <label for="item_1_3_d">Dokumen PPI (Pencegahan dan Pengendalian Infeksi)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>1.4 Kompetensi Sosial Emosional</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_4_a" name="item_1_4_a" value="Ada" class="validate-input">
-                <label for="item_1_4_a">RPP/Modul Ajar (Integrasi KSE) (misal: teknik STOP, kerja kelompok).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_4_b" name="item_1_4_b" value="Ada" class="validate-input">
-                <label for="item_1_4_b">Materi Ajar KSE (Kompetensi Sosial Emosional)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_1_4_c" name="item_1_4_c" value="Ada" class="validate-input">
-                <label for="item_1_4_c">Foto/Video Kegiatan KSE (Kompetensi Sosial Emosional)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>2.1 Kesepakatan Kelas</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_1_a" name="item_2_1_a" value="Ada" class="validate-input">
-                <label for="item_2_1_a">Foto Kesepakatan Kelas yang terpajang.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_1_b" name="item_2_1_b" value="Ada" class="validate-input">
-                <label for="item_2_1_b">Foto proses pembuatan kesepakatan bersama siswa.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_1_c" name="item_2_1_c" value="Ada" class="validate-input">
-                <label for="item_2_1_c">Dokumen kesepakatan yang ditandatangani guru dan siswa.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>2.2 Penanganan Disiplin</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_2_a" name="item_2_2_a" value="Ada" class="validate-input">
-                <label for="item_2_2_a">Catatan/jurnal penanganan kasus siswa (misal: menggunakan segitiga restitusi).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_2_b" name="item_2_2_b" value="Ada" class="validate-input">
-                <label for="item_2_2_b">Buku piket/catatan guru tentang tindak lanjut pelanggaran (dialog, bukan hukuman).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_2_c" name="item_2_2_c" value="Ada" class="validate-input">
-                <label for="item_2_2_c">SOP (Standar Operasional Prosedur) penanganan disiplin siswa.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>2.3 Keterlibatan Siswa</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_3_a" name="item_2_3_a" value="Ada" class="validate-input">
-                <label for="item_2_3_a">RPP/Modul Ajar (menunjukkan manajemen waktu & variasi kegiatan).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_3_b" name="item_2_3_b" value="Ada" class="validate-input">
-                <label for="item_2_3_b">Instrumen dan hasil supervisi akademik oleh Kepala Sekolah/Pengelola.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_2_3_c" name="item_2_3_c" value="Ada" class="validate-input">
-                <label for="item_2_3_c">Foto/video yang menunjukkan siswa fokus dan terlibat aktif.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>3.1 Perencanaan Pembelajaran</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_1_a" name="item_3_1_a" value="Ada" class="validate-input">
-                <label for="item_3_1_a">Kumpulan RPP/Modul Ajar.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_1_b" name="item_3_1_b" value="Ada" class="validate-input">
-                <label for="item_3_1_b">Program Tahunan (Prota).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_1_c" name="item_3_1_c" value="Ada" class="validate-input">
-                <label for="item_3_1_c">Program Semester (Promes).</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>3.2 Penilaian Formatif</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_2_a" name="item_3_2_a" value="Ada" class="validate-input">
-                <label for="item_3_2_a">Contoh instrumen penilaian formatif (kuis, LKPD, rubrik observasi).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_2_b" name="item_3_2_b" value="Ada" class="validate-input">
-                <label for="item_3_2_b">Contoh hasil pekerjaan siswa yang diberi umpan balik/catatan perbaikan.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_2_c" name="item_3_2_c" value="Ada" class="validate-input">
-                <label for="item_3_2_c">Jurnal refleksi guru setelah mengajar.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>3.3 Penilaian Sumatif</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_3_a" name="item_3_3_a" value="Ada" class="validate-input">
-                <label for="item_3_3_a">Instrumen Penilaian Sumatif</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_3_b" name="item_3_3_b" value="Ada" class="validate-input">
-                <label for="item_3_3_b">Dokumen KKTP ( Kriteria Ketercapaian Tujuan Pembelajaran)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_3_c" name="item_3_3_c" value="Ada" class="validate-input">
-                <label for="item_3_3_c">Portofolio/Proyek Siswa</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>3.4 Laporan Kemajuan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_4_a" name="item_3_4_a" value="Ada" class="validate-input">
-                <label for="item_3_4_a">Contoh Rapor (Deskriptif)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_4_b" name="item_3_4_b" value="Ada" class="validate-input">
-                <label for="item_3_4_b">Dokumen Remedial & Pengayaan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_4_c" name="item_3_4_c" value="Ada" class="validate-input">
-                <label for="item_3_4_c">Notulen Rapat Orang Tua</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>3.5 HOTS (Keterampilan Berpikir Tingkat Tinggi)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_5_a" name="item_3_5_a" value="Ada" class="validate-input">
-                <label for="item_3_5_a">RPP (PBL/PjBL/Inkuiri)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_5_b" name="item_3_5_b" value="Ada" class="validate-input">
-                <label for="item_3_5_b">LKPD/Tugas HOTS</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_3_5_c" name="item_3_5_c" value="Ada" class="validate-input">
-                <label for="item_3_5_c">Hasil Karya (Analisis) Siswa</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>4.1 Kegiatan Keagamaan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_1_a" name="item_4_1_a" value="Ada" class="validate-input">
-                <label for="item_4_1_a">Jadwal Kegiatan Keagamaan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_1_b" name="item_4_1_b" value="Ada" class="validate-input">
-                <label for="item_4_1_b">Foto/Video Kegiatan keagamaan.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_1_c" name="item_4_1_c" value="Ada" class="validate-input">
-                <label for="item_4_1_c">RPP/Modul Ajar Agama</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>4.2 Konten Lokal dan Kebangsaan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_2_a" name="item_4_2_a" value="Ada" class="validate-input">
-                <label for="item_4_2_a">RPP/Modul Ajar (IPS, PKn, Sejarah) yang mengintegrasikan konten lokal/kebangsaan.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_2_b" name="item_4_2_b" value="Ada" class="validate-input">
-                <label for="item_4_2_b">Foto/video kegiatan (peringatan hari besar nasional, penggunaan batik).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_2_c" name="item_4_2_c" value="Ada" class="validate-input">
-                <label for="item_4_2_c">Dokumentasi kunjungan (museum, situs budaya) atau bakti sosial.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>4.3 Pemecahan Masalah</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_3_a" name="item_4_3_a" value="Ada" class="validate-input">
-                <label for="item_4_3_a">RPP (PBL/PjBL)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_3_b" name="item_4_3_b" value="Ada" class="validate-input">
-                <label for="item_4_3_b">Instrumen Penilaian HOTS</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_3_c" name="item_4_3_c" value="Ada" class="validate-input">
-                <label for="item_4_3_c">Hasil proyek/karya siswa yang memecahkan masalah.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>4.4 Keterampilan Hidup (Life Skills)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_4_a" name="item_4_4_a" value="Ada" class="validate-input">
-                <label for="item_4_4_a">Dokumen KOSP yang menyebutkan kekhasan (misal: life skills, vokasi).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_4_b" name="item_4_4_b" value="Ada" class="validate-input">
-                <label for="item_4_4_b">Modul/jadwal pelatihan life skills / keterampilan vokasi.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_4_4_c" name="item_4_4_c" value="Ada" class="validate-input">
-                <label for="item_4_4_c">Foto/video pameran hasil karya life skills siswa.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>5.1 Refleksi Pembelajaran</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_1_a" name="item_5_1_a" value="Ada" class="validate-input">
-                <label for="item_5_1_a">Jadwal/Agenda rapat evaluasi rutin.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_1_b" name="item_5_1_b" value="Ada" class="validate-input">
-                <label for="item_5_1_b">Notulen rapat yang berisi agenda refleksi pembelajaran.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_1_c" name="item_5_1_c" value="Ada" class="validate-input">
-                <label for="item_5_1_c">Instrumen refleksi diri yang diisi oleh pendidik.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>5.2 Supervisi Akademik</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_2_a" name="item_5_2_a" value="Ada" class="validate-input">
-                <label for="item_5_2_a">SK Tim Penjaminan Mutu (TPM) (jika ada).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_2_b" name="item_5_2_b" value="Ada" class="validate-input">
-                <label for="item_5_2_b">Jadwal dan instrumen supervisi akademik.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_2_c" name="item_5_2_c" value="Ada" class="validate-input">
-                <label for="item_5_2_c">Laporan hasil supervisi dan tindak lanjutnya.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>5.3 Pengembangan Profesi (PKB)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_3_a" name="item_5_3_a" value="Ada" class="validate-input">
-                <label for="item_5_3_a">Program/rencana PKB (Pengembangan Keprofesian Berkelanjutan) lembaga.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_3_b" name="item_5_3_b" value="Ada" class="validate-input">
-                <label for="item_5_3_b">Laporan pelaksanaan PKB (IHT, workshop).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_3_c" name="item_5_3_c" value="Ada" class="validate-input">
-                <label for="item_5_3_c">Sertifikat/surat tugas keikutsertaan pendidik dalam pelatihan.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_3_d" name="item_5_3_d" value="Ada" class="validate-input">
-                <label for="item_5_3_d">Dokumentasi (foto, notulen) kegiatan komunitas belajar (Kombel) internal.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>5.4 Manajemen Kinerja Guru</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_4_a" name="item_5_4_a" value="Ada" class="validate-input">
-                <label for="item_5_4_a">SOP atau pedoman tentang manajemen kinerja guru.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_4_b" name="item_5_4_b" value="Ada" class="validate-input">
-                <label for="item_5_4_b">Dokumen penilaian kinerja pendidik (misal: PKG).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_5_4_c" name="item_5_4_c" value="Ada" class="validate-input">
-                <label for="item_5_4_c">Bukti pemberian penghargaan (sertifikat, insentif) atau sanksi (surat teguran).</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>6.1 Visi, Misi, dan Tujuan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_1_a" name="item_6_1_a" value="Ada" class="validate-input">
-                <label for="item_6_1_a">Dokumen Visi, Misi, dan Tujuan lembaga.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_1_b" name="item_6_1_b" value="Ada" class="validate-input">
-                <label for="item_6_1_b">Foto pajangan Visi-Misi di tempat strategis.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_1_c" name="item_6_1_c" value="Ada" class="validate-input">
-                <label for="item_6_1_c">Notulen/foto sosialisasi Visi-Misi kepada warga belajar dan orang tua.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>6.2 Kemitraan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_2_a" name="item_6_2_a" value="Ada" class="validate-input">
-                <label for="item_6_2_a">Dokumen MoU/PKS dengan mitra (DUDI, instansi, komunitas).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_2_b" name="item_6_2_b" value="Ada" class="validate-input">
-                <label for="item_6_2_b">Undangan/notulen rapat dengan orang tua/wali (komite).</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_2_c" name="item_6_2_c" value="Ada" class="validate-input">
-                <label for="item_6_2_c">Laporan kegiatan yang melibatkan mitra atau orang tua.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>6.3 Evaluasi Pemangku Kepentingan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_3_a" name="item_6_3_a" value="Ada" class="validate-input">
-                <label for="item_6_3_a">Instrumen survei/evaluasi untuk orang tua, siswa, atau mitra.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_3_b" name="item_6_3_b" value="Ada" class="validate-input">
-                <label for="item_6_3_b">Laporan hasil survei/evaluasi.</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_3_c" name="item_6_3_c" value="Ada" class="validate-input">
-                <label for="item_6_3_c">Notulen rapat evaluasi yang mengundang perwakilan pemangku kepentingan.</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>6.4 Perencanaan Berbasis Data</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_4_a" name="item_6_4_a" value="Ada" class="validate-input">
-                <label for="item_6_4_a">Dokumen RKT/RKAS</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_4_b" name="item_6_4_b" value="Ada" class="validate-input">
-                <label for="item_6_4_b">EDS / Rapor Pendidikan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_6_4_c" name="item_6_4_c" value="Ada" class="validate-input">
-                <label for="item_6_4_c">Notulen Rapat Penyusunan RKT</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>7.1 Anggaran</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_1_a" name="item_7_1_a" value="Ada" class="validate-input">
-                <label for="item_7_1_a">Dokumen RKA</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_1_b" name="item_7_1_b" value="Ada" class="validate-input">
-                <label for="item_7_1_b">Laporan Keuangan/LPJ (BOS)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>7.2 Rincian Anggaran</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_2_a" name="item_7_2_a" value="Ada" class="validate-input">
-                <label for="item_7_2_a">Dokumen RKA Rinci</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>7.3 Laporan Keuangan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_3_a" name="item_7_3_a" value="Ada" class="validate-input">
-                <label for="item_7_3_a">Laporan Keuangan Berkala</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_3_b" name="item_7_3_b" value="Ada" class="validate-input">
-                <label for="item_7_3_b">Bukti Publikasi Laporan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_7_3_c" name="item_7_3_c" value="Ada" class="validate-input">
-                <label for="item_7_3_c">Notulen Rapat Laporan</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>8.1 Sarana Prasarana (Sarpras)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_1_a" name="item_8_1_a" value="Ada" class="validate-input">
-                <label for="item_8_1_a">Daftar Inventaris Barang (KIR)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_1_b" name="item_8_1_b" value="Ada" class="validate-input">
-                <label for="item_8_1_b">Data Prasarana</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_1_c" name="item_8_1_c" value="Ada" class="validate-input">
-                <label for="item_8_1_c">Foto Kondisi Sarpras</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_1_d" name="item_8_1_d" value="Ada" class="validate-input">
-                <label for="item_8_1_d">MoU/PKS Pemanfaatan Sarpras</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>8.2 Manajemen Sarpras</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_2_a" name="item_8_2_a" value="Ada" class="validate-input">
-                <label for="item_8_2_a">Jadwal Penggunaan Ruang</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_2_b" name="item_8_2_b" value="Ada" class="validate-input">
-                <label for="item_8_2_b">Buku Pemeliharaan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_8_2_c" name="item_8_2_c" value="Ada" class="validate-input">
-                <label for="item_8_2_c">SOP Peminjaman</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
             <legend>9.1 Dokumen KOSP</legend>
             <div class="form-group-checkbox">
                 <input type="checkbox" id="item_9_1_a" name="item_9_1_a" value="Ada" class="validate-input">
@@ -663,390 +284,68 @@
             <legend>9.2 Evaluasi Kurikulum</legend>
             <div class="form-group-checkbox">
                 <input type="checkbox" id="item_9_2_a" name="item_9_2_a" value="Ada" class="validate-input">
-                <label for="item_9_2_a">SK Tim Pengembang Kurikulum</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_9_2_b" name="item_9_2_b" value="Ada" class="validate-input">
-                <label for="item_9_2_b">Notulen Rapat Evaluasi Kurikulum</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_9_2_c" name="item_9_2_c" value="Ada" class="validate-input">
-                <label for="item_9_2_c">Instrumen Evaluasi</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>9.3 Analisis Kebutuhan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_9_3_a" name="item_9_3_a" value="Ada" class="validate-input">
-                <label for="item_9_3_a">Dokumen KOSP (Bab Analisis Karakteristik & Kebutuhan)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>10.1 Kebinekaan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_1_a" name="item_10_1_a" value="Ada" class="validate-input">
-                <label for="item_10_1_a">Tata Tertib/Kode Etik</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_1_b" name="item_10_1_b" value="Ada" class="validate-input">
-                <label for="item_10_1_b">Foto/Video Kegiatan Keberagaman</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_1_c" name="item_10_1_c" value="Ada" class="validate-input">
-                <label for="item_10_1_c">RPP (Integrasi Kebinekaan)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>10.2 Fasilitas Ibadah</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_2_a" name="item_10_2_a" value="Ada" class="validate-input">
-                <label for="item_10_2_a">Jadwal/Kebijakan Ibadah</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_2_b" name="item_10_2_b" value="Ada" class="validate-input">
-                <label for="item_10_2_b">Foto Fasilitas/Kegiatan Ibadah</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>10.3 Kesetaraan Gender</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_3_a" name="item_10_3_a" value="Ada" class="validate-input">
-                <label for="item_10_3_a">Tata Tertib</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_3_b" name="item_10_3_b" value="Ada" class="validate-input">
-                <label for="item_10_3_b">Foto Kegiatan (Peran Setara)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_10_3_c" name="item_10_3_c" value="Ada" class="validate-input">
-                <label for="item_10_3_c">Materi/Program Kesetaraan Gender</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>11.1 PPDB</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_11_1_a" name="item_11_1_a" value="Ada" class="validate-input">
-                <label for="item_11_1_a">SOP PPDB</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_11_1_b" name="item_11_1_b" value="Ada" class="validate-input">
-                <label for="item_11_1_b">Tata Tertib</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>11.2 Layanan Siswa Inklusif</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_11_2_a" name="item_11_2_a" value="Ada" class="validate-input">
-                <label for="item_11_2_a">RPP (Berdiferensiasi)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_11_2_b" name="item_11_2_b" value="Ada" class="validate-input">
-                <label for="item_11_2_b">Notulen/Foto Sosialisasi Inklusif</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_11_2_c" name="item_11_2_c" value="Ada" class="validate-input">
-                <label for="item_11_2_c">Program Layanan Siswa (ABK)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>12.1 Penanganan Kekerasan (TPPK)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_1_a" name="item_12_1_a" value="Ada" class="validate-input">
-                <label for="item_12_1_a">SK Tim TPPK (Tim Pencegahan dan Penanganan Kekerasan)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_1_b" name="item_12_1_b" value="Ada" class="validate-input">
-                <label for="item_12_1_b">SOP Penanganan Kekerasan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_1_c" name="item_12_1_c" value="Ada" class="validate-input">
-                <label for="item_12_1_c">Tata Tertib (Sanksi Perundungan)</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>12.2 Sosialisasi Anti-Perundungan</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_2_a" name="item_12_2_a" value="Ada" class="validate-input">
-                <label for="item_12_2_a">Poster/Media ( KIE) Anti-Perundungan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_2_b" name="item_12_2_b" value="Ada" class="validate-input">
-                <label for="item_12_2_b">Dokumentasi Sosialisasi/Kampanye</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_12_2_c" name="item_12_2_c" value="Ada" class="validate-input">
-                <label for="item_12_2_c">Catatan Penanganan Kasus</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>13.1 Kondisi Fisik</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_1_a" name="item_13_1_a" value="Ada" class="validate-input">
-                <label for="item_13_1_a">Foto Kondisi Fisik Bangunan</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_1_b" name="item_13_1_b" value="Ada" class="validate-input">
-                <label for="item_13_1_b">Tata Tertib Penggunaan Alat/Ruang</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>13.2 Fasilitas P3K / UKS</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_2_a" name="item_13_2_a" value="Ada" class="validate-input">
-                <label for="item_13_2_a">Foto Kotak P3K & Isinya</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_2_b" name="item_13_2_b" value="Ada" class="validate-input">
-                <label for="item_13_2_b">Daftar Isi P3K</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_2_c" name="item_13_2_c" value="Ada" class="validate-input">
-                <label for="item_13_2_c">Foto Ruang UKS</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>13.3 Mitigasi Bencana</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_3_a" name="item_13_3_a" value="Ada" class="validate-input">
-                <label for="item_13_3_a">SOP Mitigasi Bencana</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_3_b" name="item_13_3_b" value="Ada" class="validate-input">
-                <label for="item_13_3_b">Foto Jalur Evakuasi</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_3_c" name="item_13_3_c" value="Ada" class="validate-input">
-                <label for="item_13_3_c">Foto APAR (Alat Pemadam Api Ringan)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_13_3_d" name="item_13_3_d" value="Ada" class="validate-input">
-                <label for="item_13_3_d">Dokumentasi Simulasi Bencana</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>14.1 PHBS (Perilaku Hidup Bersih Sehat)</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_1_a" name="item_14_1_a" value="Ada" class="validate-input">
-                <label for="item_14_1_a">Foto Lingkungan Bersih (Toilet, dll)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_1_b" name="item_14_1_b" value="Ada" class="validate-input">
-                <label for="item_14_1_b">Jadwal Piket</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_1_c" name="item_14_1_c" value="Ada" class="validate-input">
-                <label for="item_14_1_c">Dokumentasi Kegiatan PHBS</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>14.2 Kesehatan Mental</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_2_a" name="item_14_2_a" value="Ada" class="validate-input">
-                <label for="item_14_2_a">Jadwal/Program Layanan BK</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_2_b" name="item_14_2_b" value="Ada" class="validate-input">
-                <label for="item_14_2_b">Program Ekstrakurikuler</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_2_c" name="item_14_2_c" value="Ada" class="validate-input">
-                <label for="item_14_2_c">Dokumentasi Sosialisasi Kesmen</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>14.3 Anti Narkoba & Kesehatan Reproduksi</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_3_a" name="item_14_3_a" value="Ada" class="validate-input">
-                <label for="item_14_3_a">Materi/Modul Ajar Terintegrasi</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_3_b" name="item_14_3_b" value="Ada" class="validate-input">
-                <label for="item_14_3_b">Dokumentasi Penyuluhan (BNN/Puskesmas)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_14_3_c" name="item_14_3_c" value="Ada" class="validate-input">
-                <label for="item_14_3_c">Poster/Media KIE Narkoba/Kespro</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>15.1 Portofolio Tugas</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_1_a" name="item_15_1_a" value="Ada" class="validate-input">
-                <label for="item_15_1_a">Portofolio Tugas Siswa (Makalah, Esai)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_1_b" name="item_15_1_b" value="Ada" class="validate-input">
-                <label for="item_15_1_b">Video Presentasi/Diskusi Siswa</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>15.2 Karya Proyek</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_2_a" name="item_15_2_a" value="Ada" class="validate-input">
-                <label for="item_15_2_a">Foto/Video Karya/Proyek Siswa</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_2_b" name="item_15_2_b" value="Ada" class="validate-input">
-                <label for="item_15_2_b">Laporan Proyek/Portofolio Karya</label>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>15.3 Tracer Study & Testimoni</legend>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_3_a" name="item_15_3_a" value="Ada" class="validate-input">
-                <label for="item_15_3_a">Tracer Study (Penelusuran Lulusan)</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_3_b" name="item_15_3_b" value="Ada" class="validate-input">
-                <label for="item_15_3_b">Catatan Kegiatan Siswa di Masyarakat</label>
-            </div>
-            <div class="form-group-checkbox">
-                <input type="checkbox" id="item_15_3_c" name="item_15_3_c" value="Ada" class="validate-input">
-                <label for="item_15_3_c">Testimoni Lulusan/Mitra</label>
+                <label for="item_9_2_a">Dokumen dan notulen Evaluasi Kurikulum</label>
             </div>
         </fieldset>
         
-        <button type="submit" id="submitButton">Kirim Data</button>
         <div id="message"></div>
+
+        <button type="submit" id="submitBtn" disabled>Kirim Data</button>
+
     </form>
 
     <script>
-        // === JavaScript untuk Validasi dan Pengiriman ===
-        // KODE INI TIDAK PERLU DIUBAH.
-        // Logikanya akan memvalidasi input teks (NPSN/Sekolah)
-        // dan akan mengabaikan validasi checkbox (karena sudah punya value "Ada")
-        // Ini adalah perilaku yang kita inginkan.
-
-        // !!! GANTI DENGAN URL ANDA DARI LANGKAH 2 !!!
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwzINbwlCuKFFJX95Pxa-1utl2arYkFwrdmzOPTu-qWCrEGVlmcUEmJt_di9sxKVTBy9Q/exec';
-        
-        const form = document.getElementById('checklistForm');
-        const submitButton = document.getElementById('submitButton');
-        const messageDiv = document.getElementById('message');
-        const allInputs = document.querySelectorAll('.validate-input');
-
-        function validateForm() {
-            let allValid = true;
-            allInputs.forEach(input => {
-                // Logika ini sekarang hanya akan me-validasi input text
-                // karena checkbox memiliki value="Ada" (bukan "")
-                if (input.type === 'text' && input.value === "") {
-                    allValid = false;
-                }
-            });
-            submitButton.disabled = !allValid;
+        // Fungsi untuk mengaktifkan/menonaktifkan tombol submit
+        function checkValidation() {
+            const npsn = document.getElementById('npsn').value.trim();
+            const namaSekolah = document.getElementById('namaSekolah').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Tombol hanya aktif jika NPSN dan Nama Sekolah sudah diisi
+            if (npsn !== '' && namaSekolah !== '') {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
         }
 
-        // Panggil validasi saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', validateForm);
+        // Tambahkan event listener untuk input teks
+        document.getElementById('npsn').addEventListener('input', checkValidation);
+        document.getElementById('namaSekolah').addEventListener('input', checkValidation);
 
-        // Panggil validasi setiap kali ada input di field yang divalidasi
-        allInputs.forEach(input => {
-            if (input.type === 'text') {
-                input.addEventListener('input', validateForm);
-            }
-            // Kita tidak perlu listener di checkbox untuk validasi tombol submit
-        });
-
-        form.addEventListener('submit', e => {
-            e.preventDefault(); 
-            
-            submitButton.disabled = true;
-            submitButton.textContent = 'Mengirim...';
-            messageDiv.style.display = 'none';
-
-            fetch(scriptURL, { 
-                method: 'POST', 
-                body: new FormData(form)
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                if (data.result === 'success') {
-                    messageDiv.textContent = 'Data berhasil terkirim ke Google Sheet!';
-                    messageDiv.className = 'success';
-                    messageDiv.style.display = 'block';
-                    
-                    form.reset(); // Reset form
-                    validateForm(); // Panggil validasi lagi (akan menonaktifkan tombol)
-                } else {
-                    throw new Error(data.message || 'Terjadi kesalahan');
+        // Optional: Toggle checkbox saat mengklik seluruh area form-group-checkbox
+        document.querySelectorAll('.form-group-checkbox').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Pastikan klik tidak terjadi pada input itu sendiri atau elemen anak yang ingin ditangani secara berbeda
+                if (e.target.tagName.toLowerCase() !== 'input') {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    // Anda mungkin perlu memicu event change secara manual jika ada logika JS lain yang bergantung padanya
+                    checkbox.dispatchEvent(new Event('change')); 
                 }
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                messageDiv.textContent = 'Error: ' + error.message;
-                messageDiv.className = 'error';
-                messageDiv.style.display = 'block';
-            })
-            .finally(() => {
-                if (submitButton.disabled && messageDiv.className !== 'success') {
-                   submitButton.disabled = false;
-                }
-                submitButton.textContent = 'Kirim Data';
             });
+        });
+        
+        // Cek inisial saat halaman dimuat (jika formulir sudah memiliki nilai default)
+        checkValidation();
+
+        // Contoh penanganan submit form (Anda bisa mengganti ini dengan fungsi kirim data Anda)
+        document.getElementById('checklistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const messageDiv = document.getElementById('message');
+            
+            // Simulasikan proses pengiriman
+            messageDiv.style.display = 'block';
+            messageDiv.className = 'success';
+            messageDiv.innerHTML = 'Data Berhasil Dikirim! Terima kasih.';
+
+            // Reset form setelah 3 detik (opsional)
+            setTimeout(() => {
+                // this.reset();
+                // messageDiv.style.display = 'none';
+                // checkValidation();
+            }, 3000);
         });
     </script>
-<script src="path/ke/script-utama.js"></script>
-
-
-
-    <script>
-    // --- 1. Mendapatkan Elemen ---
-    const inputElement = document.getElementById('dataInput');
-    const checkElement = document.getElementById('dataCheck');
-
-    // --- 2. Memuat Data Saat Halaman Dimuat ---
-    window.onload = function() {
-        // Memuat nilai teks
-        const storedText = localStorage.getItem('inputText');
-        if (storedText) {
-            inputElement.value = storedText;
-        }
-
-        // Memuat status checkbox (menggunakan 'true' atau null)
-        const storedCheck = localStorage.getItem('isChecked');
-        if (storedCheck === 'true') {
-            checkElement.checked = true;
-        } else {
-            checkElement.checked = false;
-        }
-    };
-
-    // --- 3. Menyimpan Data Setiap Kali Ada Perubahan (Event Listener) ---
-
-    // Menyimpan saat input teks berubah
-    inputElement.addEventListener('input', function() {
-        localStorage.setItem('inputText', inputElement.value);
-    });
-
-    // Menyimpan saat status checkbox berubah
-    checkElement.addEventListener('change', function() {
-        // Menyimpan 'true' jika tercentang, 'false' jika tidak
-        localStorage.setItem('isChecked', checkElement.checked ? 'true' : 'false');
-    });
-
-    // CATATAN: Jika Anda ingin data hanya bertahan selama sesi browser (bukan permanen),
-    // ganti semua 'localStorage' dengan 'sessionStorage'.
-
-</script>
-    
 </body>
 </html>
